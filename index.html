@@ -1,13 +1,135 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
   <title>atividade</title>
-  <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>cascata</h1>
-  
+  <header>
+    <h1 id="tituloprincipal">Anotaçoes em aula</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="#cascata">cascata</a></li>
+        <li><a href="#especificidade">especifidade</a></li>
+        <li><a href="#seletores">combinacões de seletores</a></li>
+        <li><a href="#pseudo-classes">pseudo-classes</a></li>
+        <li><a href="#display">display</a></li>
+        <li><a href="#4temas">margin/padding/border e box-sizing</a><li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>cascata</h2>
+      <div class="um">
+        <p>A cascata no html é tipo a regra que decide qual estilo vai mandar quando tem várias coisas tentando mudar o mesmo elemento <br>prioridades: </p>
+        <ol>
+          <li>
+            <p><strong>ordem no codigo - </strong>ultima regra escrita é a que vale</p>
+          </li>
+          <li>
+            <p><strong>especificidade - </strong>quando mias detalhado o seletor mias ele pesa</p>
+            <li>
+              <p><strong>importancia - </strong>o !important prevalece sobre quaalquer coisa</p>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="especificidade">
+      <h2>especificidade</h2>
+      <div>
+        <p>A especificidade é um número que define o "peso" de um seletor, quanto maior o peso , maior a chance dele se aplicar</p>
+        <ul>
+          <li>
+            <p><strong>Elemento- </strong>1 pontinho</p>
+          </li>
+          <li>
+            <p><strong>pseudo-classes e atributos- </strong>10 pontinhos</p>
+          </li>
+          <li>
+            <p><strong>id- </strong>100 pontinhos</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="seletores">
+      <h2>combinacões de seletores</h2>
+      <div>
+        <p>é possivel unir seletores para criar regras mais direcionadas</p>
+        <table>
+          <tr>
+            <td><strong>Tipo de relação</strong></td>
+          <td><strong>Exemplos</strong></td>
+          <td><strong>Descrição</strong></td>
+          </tr>
+
+          <tr>
+            <td><strong>Descendentes</strong></td>
+            <td>primeiro h1</td>
+            <td>Seleciona todos os h1 que estejam dentro de um elemento com classe strong </td>
+          </tr>
+
+          <tr>
+            <td><strong>Filho direito</strong></td>
+            <td>primeira h1</td>
+            <td>Seleciona apenas os h1 que são filhos direitos do elemento com classe strong</td>
+          </tr>
+
+          <tr>
+            <td><strong>Irmão proximo</strong></td>
+            <td>primeira h1 mais h1</td>
+            <td>Seleciona o h1 que vem logo em seguida após o outro dentro do strong</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="pseudo-classes">
+      <h2>pseudo-classes</h2>
+      <div>
+        <p>pseudo-classes permite selecionar elementos de acordo com seu estado ou posição</p>
+        <h3><strong>first-child</strong></h3>
+        <p>pega o primeiro filho de um pai</p>
+        <h3><strong>last-child</strong></h3>
+        <p>pega o ultimo filho de um pai</p>
+        <h3><strong>nth-child(n)</strong></h3>
+        <p>seleciona o filho de numero (n) 1,primeiro ,2 segundo ....</p>
+        <h3><strong>nth-of-type(n)</strong></h3>
+        <p>seleciona o (N) filho de um tipo bem especifico</p>
+      </div>
+    </section>
+
+    <section id="display">
+      <h2>Display inline e block</h2>
+      <div>
+        <p><strong>Inline- </strong>ocupa apenas o espaço necessário e aceita somente margens esquerda e direita (left e right) </p>
+        <p><strong>Block- </strong>forma um bloco completo podendo ajustar a altura, largura e margens em todos os lados</p>
+      </div>
+    </section>
+
+    <section id="Temas">
+      <h2>Margin, padding, border e box-Sizing</h2>
+      <div>
+        <p><strong>Margin- </strong>espaço externo entre o elemento e oque está ao redor</p>
+        <p><strong>Padding- </strong>espaço interno entre o conteúdo e a borda</p>
+        <p><strong>Border- </strong>a linha que contorna o elemento </p>
+        <p><strong>Box-sizing- </strong>faz largura e altura incluirem , padding e a border</p>
+        <h3>shorthand (Atalhos)</h3>
+        <p>1 valor - aplica para todos os lados</p>
+        <p>2 valores - primeiro enima e embaixo depois nas laterais</p>
+        <p>3  valores - lateral , encima e embaixo </p>
+        <p>4 valores - encima, direita, embaixo e esquerda todos em sentido horario</p>
+        <h3><strong>Sufixos</strong></h3>
+        <p>Block - eixo vertical top e bottom</p>
+        <p>inline - eixo horizontal left e right</p>
+        <p>top, bottom, left, right - afetam lados especificos</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
